@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
@@ -26,3 +27,33 @@ const Layout: React.FC = () => {
 export default Layout;
 
 
+=======
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Sidebar from './Sidebar';
+import Header from './Header';
+
+const Layout: React.FC = () => {
+  return (
+    <div className="flex h-screen bg-background">
+      {/* Sidebar */}
+      <Sidebar />
+      
+      {/* Main content */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Header */}
+        <Header />
+        
+        {/* Page content */}
+        <main className="flex-1 overflow-auto p-6">
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
+};
+
+export default Layout;
+
+
+>>>>>>> 9163bc16ccf897faeceb43da7f02dfc306ca84a6
